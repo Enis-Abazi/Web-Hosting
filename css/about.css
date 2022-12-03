@@ -1,0 +1,908 @@
+html , body { 
+    overflow-x: hidden;
+    color: #232323;
+    font-family: "Muli" , sans-serif;
+}
+* { 
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+::-webkit-scrollbar { 
+    display: none;
+}
+@font-face {
+    font-family: "Muli";
+    src: url(../fonts/Muli-Light.ttf);
+}
+@font-face {
+    font-family: "Oswald Bold";
+    src: url(../fonts/Oswald-Bold.ttf);
+}
+@font-face {
+    font-family: "Oswald Regular";
+    src: url(../fonts/Oswald-Regular.ttf);
+}
+@font-face {
+    font-family: "Oswald Medium";
+    src: url(../fonts/Oswald-Medium.ttf);
+}
+a { 
+    text-decoration: none;
+}
+ol , ul { 
+    list-style-type: none;
+}
+
+
+.blog { 
+    background-color: #020230;
+    padding: 100px;
+    height: 100%;
+}
+.blog .container { 
+    position: relative;
+    
+}
+.blog .container header { 
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    align-items: center;
+    background-color: #010E21;
+    z-index: 9999;
+}
+
+.blog .container header .row-header { 
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    padding: 10px 0;
+}
+.blog .container header .row-header .logo { 
+    position: relative;
+    left: 100px;
+}
+.blog .container header .row-header .nav { 
+    position: relative;
+}
+.blog .container header .row-header .nav ul { 
+    display: flex;
+    justify-content: space-between;
+    column-gap: 50px;
+    padding: 5px 0;
+}
+.blog .container header .row-header .nav ul li a { 
+    font-size: 14px;
+    color: #fff;
+    font-weight: 300;
+}
+.blog .container header .row-header .nav ul li a:hover { 
+    color: #e031c3;
+    transition: 0.3s ease;
+}
+.blog .container header .row-header .btn { 
+    position: relative;
+    right: 100px;
+}
+.blog .container header .row-header .btn a button { 
+    width: 175px;
+    font-size: 15px;
+    background: #f32a48;
+    border: none;
+    height: 100%;
+    border-radius: 25px;
+    border: #f32a48;
+    color: #fff;
+    font-weight: 1000;
+    cursor: pointer;
+}
+.blog .container header .row-header .btn .icon { 
+    position: absolute;
+    top: 7px;
+    left: 12px;
+}
+.blog .container header .row-header .btn .icon i { 
+    font-size: 17px;
+    color: #fff;
+}
+.blog .container header .row-header .btn a button:hover { 
+    transition: 0.5s ease-in;
+    background-color: #bd273d;
+    
+}
+/* The Bars */
+
+
+  
+.sidebar {
+    z-index: 111111;
+    position: fixed;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #10285d;
+    left: -100%;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+label #btn { 
+    color: #fff;
+}
+
+.sidebar ul li a {
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+}
+
+.sidebar ul li ul li a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 25px;
+    color: white;
+    padding: 0 0 0 40px;
+    transition: .5s all linear;
+    position: relative;
+  
+    left: calc(1% - 25px);
+    top: 50px;
+}
+
+
+.sidebar ul li ul li:hover a {
+    color: red;
+}
+
+#check {
+    display: none;
+}
+
+label #btn {
+    position: absolute;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 6px;
+    top: 1%;
+    font-size: 25px;
+    padding: 6px 12px;
+    z-index: 111111111;
+    color: #333;
+    right: 85%;
+}
+
+label #cancel {
+    position: fixed;
+    z-index: 1111;
+    left: -80%;
+    top: 1%;
+    font-size: 25px;
+    padding: 6px 12px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#check:checked~.sidebar {
+    left: 100px;
+}
+
+#check:checked~label #btn {
+    opacity: 1;
+    pointer-events: none;
+}
+
+#check:checked~label #cancel {
+    left: 1%;
+}
+.sidebar , label ,#checkbox { 
+    display: none;
+}
+/* The end of bars */
+.blog .row { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.blog .row .col { 
+    text-align: center;
+}
+.blog .row .col img { 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.blog .row .col h1 { 
+    font-family: "Oswald Regular";
+    font-size: 65px;
+    color: #fff;
+    font-weight: 600;
+    padding: 0 0 10px 0;
+}   
+.blog .row .col h3 { 
+    font-size: 13px;
+    color: #fff;
+    padding: 8px 0;
+    font-family: "Muli";
+    font-weight: 1000;
+}
+.blog .row .col .btn { 
+    position: relative;
+    padding: 20px 0;
+}
+.blog .row .col .btn a button { 
+    background-color: #eb566c;
+    font-size: 14px;
+    font-family: "Oswald Regular";
+    color: #fff;
+    text-transform: uppercase;  
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    outline: none;
+    border: transparent;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.blog .row .col .btn a button:hover { 
+    transform:scale(1.1);
+    background-color: #bd273d;
+    transition: 0.3s ease-in;
+}
+.post { 
+    padding: 200px;
+    background-color: #fff;
+}
+.post .left { 
+    text-align: start;
+    position: relative;
+}
+.post .left h3 { 
+    font-size: 18px;
+    font-weight: 700;
+    color: #eb566c;
+    position: relative;
+    padding: 30px 0;
+}
+.post .left h3::before { 
+    position: absolute;
+     content: " ";
+   display: initial;
+    width: 50px;
+    height: 2px;
+    background-color: #eb566c;
+    border-radius: 25px;
+    left: calc(-4% - 25px);
+    top: 50%;
+}
+.post .row { 
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    padding: 10px 0;
+    position: relative;
+    align-items: center;
+}
+.post .row .col { 
+    flex-basis: 50%;
+    align-self: center;
+}
+.post .row .col h1 {    
+    font-size: 50px;
+    color: #28395a;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Oswald Regular";
+    padding: 20px 0;
+}
+.post .row .col img {   
+    width: 100%;
+    object-fit: cover;
+}
+.post .row .col h3 { 
+    font-size: 16px;
+    color: #10285d;
+    font-weight: 100;
+    padding: 20px 0;
+
+}
+.post .row .col .btn a button { 
+    background-color: #eb566c;
+    font-size: 14px;
+    font-family: "Oswald Regular";
+    color: #fff;
+    text-transform: uppercase;  
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    outline: none;
+    border: transparent;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.post .row .col .btn a button:hover { 
+    transform:scale(1.1);
+    background-color: #bd273d;
+    transition: 0.3s ease-in;
+}
+.post .row .col .btn { 
+    position: relative;
+}
+.post .more-info { 
+    padding: 150px 0;
+}
+.post .more-info .left-info { 
+    position: relative;
+    text-align: start;
+}
+.post .more-info .left-info h3 { 
+    font-size: 18px;
+    font-weight: 700;
+    color: #eb566c;
+    position: relative;
+    padding: 30px 0;
+}
+.post .more-info .left-info h3::before { 
+    position: absolute;
+    content: " ";
+  display: initial;
+   width: 50px;
+   height: 2px;
+   background-color: #eb566c;
+   border-radius: 25px;
+   left: calc(-4% - 25px);
+   top: 50%;
+}
+.post .more-info .we { 
+    position: relative;
+    padding: 20px 0;
+}
+.post .more-info .we h1 { 
+    font-size: 50px;
+    color: #28395a;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Oswald Regular";
+    padding: 10px 0;
+}
+.post .best-service { 
+    padding: 50px 0;
+    position: relative;
+}
+.post .best-service .left { 
+    flex-basis: 35%;
+    background: #ff4f5b;
+    padding: 78px 73px;
+    position: relative;
+    width: 60%;
+    text-align: center;
+}
+.post .best-service .right { 
+    flex-basis: 65%;
+    padding: 0 0 0 60px;
+    position: relative;
+    left: 30px;
+}
+.post .best-service .left .icon {   
+    width: 100px;
+    height: 100px;
+    background-color: #fce0d8;
+    border-radius: 100%;
+    left: 90px;
+    position: relative;
+}
+.post .best-service .left .icon img { 
+top: 25px;
+}
+.post .best-service .left .image-corner { 
+    position: relative;
+}
+.post .best-service .left .image-corner #posht { 
+    position: absolute;
+    bottom: 0;
+    right: 13px;
+    top: -83px;
+}
+.post .best-service .left .image-corner #nalt { 
+    position: absolute;
+    top: -600px;
+    right: -26%;
+}
+hr { 
+    border: 1px solid #dbdbdb;
+}
+.post .best-service .left .content { 
+    position: relative;
+}
+.post .best-service .left .content h2 { 
+    font-family: "Oswald Regular";
+    color: #fff;
+    padding: 30px 0;
+    font-size: 30px;
+}
+.post .best-service .left .content h4 { 
+    font-size: 16px;
+    color: #fff;
+    font-family: "Oswald Regular";
+    font-weight: 100;
+    padding: 10px 0;
+}
+.post .best-service .left .btn { 
+    position: relative;
+    z-index: 1111111111;
+    padding: 10px 0;
+}
+.post .best-service .left .btn a button { 
+    background-color: #fff;
+    font-size: 14px;
+    font-family: "Oswald Regular";
+    color: #10275c;
+    text-transform: uppercase;  
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    outline: none;
+    border: transparent;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.post .best-service .left .btn a button:hover { 
+    transform:scale(1.1);
+    background-color: #df3851;
+    transition: 0.3s ease-in;
+    color: #fff;
+}
+.post .best-service .right .left-content { 
+    text-align: start;
+    position: relative;
+    padding: 20px 0;
+    align-self: center;
+}
+.post .best-service .right .left-content h3 { 
+    font-size: 18px;
+    font-weight: 700;
+    color: #eb566c;
+    padding: 20px 0;
+}
+.post .best-service .right .left-content h3::before { 
+    position: absolute;
+    content: " ";
+  display: initial;
+   width: 50px;
+   height: 2px;
+   background-color: #eb566c;
+   border-radius: 25px;
+   left: calc(-7% - 25px);
+   top: 50%;
+}
+.post .best-service .right .mid-content { 
+    position: relative;
+}
+.post .best-service .right .mid-content h1 { 
+    font-size: 50px;
+    color: #28395a;
+    font-weight: 700;
+    font-family: "Oswald Regular";
+}
+.post .best-service .right .mid-content h4 { 
+    font-size: 16px;
+    color: #10285d;
+    font-weight: 100;
+}
+.post .best-service .button-2  {
+    display: flex;
+    position: relative;
+    padding: 20px 0;
+    justify-content: center;
+}
+.post .best-service .button-2 .left-btn { 
+    position: relative;
+}
+.post .best-service .button-2 .left-btn a button { 
+    cursor: pointer;
+    width: 150px;
+    height: 60px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border: none;
+    background: #ff4f5b;
+    color: #fff;
+    font-size: 16px;
+    font-family: "Oswald Regular";
+    outline: none;
+    text-transform: uppercase;
+}
+.post .best-service .button-2 .right-btn { 
+    position: relative;
+}
+.post .best-service .button-2 .right-btn a button { 
+    cursor: pointer;
+    width: 150px;
+    height: 60px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border: none;
+    background: #fce0d8;
+    color: #020230;
+    font-size: 16px;
+    font-family: "Oswald Regular";
+    outline: none;
+    text-transform: uppercase;
+}
+.quotes { 
+    position: relative;
+    align-items: center;
+    align-self: center;
+}
+.quotes .row-quotes { 
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    padding: 20px;
+    position: relative;
+    align-items: center;
+}
+.quotes .row-quotes .col-quote-1 { 
+    flex-basis: 50%;
+    position: relative;
+   
+}
+.quotes .row-quotes .col-quote-2 { 
+    flex-basis: 50%;
+    position: relative;
+}
+.quotes .row-quotes .col-quote-2 img { 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.quotes .row-quotes .flex { 
+    display: flex;
+    column-gap: 20px;
+    padding: 10px 0;
+    align-items: center;
+}
+.quotes .row-quotes .flex .right { 
+    position: relative;
+}
+.quotes .row-quotes .flex .right h2 { 
+    font-size: 30px;
+    color: #eb566c;
+    font-weight: 700;
+    font-family: "Oswald Regular";
+}
+.quotes .row-quotes .flex .right h4 { 
+    font-size: 16px;
+    color: #57667e;
+    font-weight: 500;
+}
+.quotes .row-quotes .content-mid { 
+    position: relative;
+}
+.quotes .row-quotes .content-mid h3 { 
+    font-size: 18px;
+    color: #57667e;
+    font-weight: 600;
+}
+footer { 
+    background: url(../images/footer\ bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+footer .footer-top { 
+    padding: 100px;
+    position: relative;
+}
+footer .footer-top .row { 
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    padding: 10px 0;
+}
+.footer-top .row .col { 
+    flex-basis: 33%;
+}
+.footer-top .row .col h3 { 
+    color: #fff;
+    font-size: 20px;
+    font-family: "Oswald Regular";
+    font-weight: 100;
+    padding: 0 0 25px 0;
+}
+.footer-top .row .col h4 { 
+    font-size: 16px;
+    color: #8ba4b1;
+    font-weight: 300;
+}
+.footer-top .row .col ul { 
+    display: flex;
+    justify-content: space-between;
+    row-gap: 20px;
+    flex-direction: column;
+}
+.footer-top .row .col ul  li a { 
+    font-size: 16px;
+    color: #8ba4b1;
+    font-weight: 300;
+}
+.footer-top .row .col ul li a:hover { 
+    color: #eb566c;
+    padding: 0 0 0 15px;
+    transition: 0.3s linear;
+}
+.footer-bottom { 
+    padding: 30px 100px;
+    position: relative;
+}
+.footer-bottom .center { 
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    align-items: center;
+}
+.footer-bottom .center .col { 
+    flex-basis: 50%;
+}
+.footer-bottom .center .col h3 { 
+    font-size: 16px;
+    color: #8ba4b1;
+    font-family: "Oswald Regular";
+    font-weight: 200;
+}
+.footer-bottom .center .col span { 
+    color: #eb566c;
+    font-size: 16px;
+    font-family: "Oswald Regular";
+    font-weight: 200;
+    border: none ;
+}
+.footer-bottom .center .col h3 i { 
+    font-size: 20px;
+    color: #eb566c;
+}
+.footer-bottom .center .col .icons { 
+    display: flex;
+    column-gap: 20px;
+    justify-content: end;
+    
+}
+.footer-bottom .center .col .icons a i { 
+      color: #8ba4b1;
+      border:1px solid  #f5f5f5;
+      font-size: 14px;
+      padding: 10px 15px;
+      border-radius: 50%;   
+
+}
+
+.footer-bottom .center .col .icons a i:hover { 
+    background-color: #eb566c;
+    border: none;
+    transition: all 0.3s ease-in;
+    color: #fff;
+}
+@media only screen and (max-width:650px) { 
+    html , body { 
+        overflow-x: hidden;
+    }
+    * { 
+        padding: 0;
+        margin: 0;
+    }
+    ::-webkit-scrollbar { 
+        display: none;
+    }
+    header .nav { 
+        display: none;
+    }
+    header .sidebar { 
+        display: initial;
+    }
+    header label { 
+        display: initial;
+    }
+    header .btn { 
+        display: none;
+    }
+    #check:checked~.sidebar {
+        left: 0;
+        transition: 0.5s ease-in;
+        top: 0;
+        z-index: 1;
+        }
+        #check:checked~label #cancel {
+            top: 3%;
+            left: 7%;
+        }
+        .blog .container header .row-header .logo { 
+            left: 10px;
+        }
+        .blog { 
+            padding: 100px 20px;
+        }
+        .blog .row { 
+            flex-direction: column;
+            row-gap: 20px;
+        }
+        .blog .row .col h1 { 
+            font-size: 35px;
+        }
+        .post { 
+            padding: 40px;
+        }
+        .post .left h3::before { 
+            width: 25px;
+        }
+        .post .row .col h1 { 
+            font-size: 25px;
+        }
+        .post .row { 
+            flex-direction: column;
+            row-gap: 20px;
+        }
+        .post .more-info .left-info h3::before { 
+            width: 25px;
+        }
+        .post .more-info .we h1 { 
+            font-size: 25px;
+        }
+        .post .best-service .left .icon { 
+            left: 0;
+            margin: 0 auto;
+        }
+        .post .best-service .right .left-content h3::before { 
+            width: 25px;
+        }
+        .post .best-service .right .mid-content h1 { 
+            font-size: 25px;
+        }
+        .post .best-service .right {
+             left: 0;
+        }
+        .quotes .row-quotes { 
+            flex-direction: column;
+            row-gap: 20pox;
+        }
+        footer  .footer-top { 
+            padding: 20px;
+        }
+        footer .footer-top .row { 
+            flex-direction: column;
+            row-gap: 20px;
+        }
+        .footer-bottom { 
+            padding: 20px 10px;
+        }
+        .footer-bottom .center { 
+            flex-direction: column;
+            row-gap: 20px;
+        }
+        .footer-bottom .center .col { 
+            text-align: center;
+        }
+}
+@media only screen and (min-width:651px) and (max-width:920px) { 
+    html , body { 
+        overflow-x: hidden;
+    }
+    * { 
+        padding: 0;
+        margin: 0;
+    }
+    ::-webkit-scrollbar { 
+        display: none;
+    }
+    header .nav { 
+        display: none;
+    }
+    header .sidebar { 
+        display: initial;
+    }
+    header label { 
+        display: initial;
+    }
+    header .btn { 
+        display: none;
+    }
+    #check:checked~.sidebar {
+        left: 0;
+        transition: 0.5s ease-in;
+        top: 0;
+        z-index: 1;
+        }
+        #check:checked~label #cancel {
+            top: 3%;
+            left: 7%;
+        }
+        .blog .container header .row-header .logo { 
+            left: 50px;
+        }
+        .blog .row { 
+            flex-direction: column;
+            row-gap: 20px;
+        }
+        .post { 
+            padding: 50px;
+        }
+        .post .row .col h1 { 
+            font-size: 25px;
+        }
+        .post .left h3::before { 
+            width: 25px;
+            left: calc(-2% - 25px);
+        }
+        .post .more-info .left-info h3::before { 
+            left: calc(-2% - 25px);
+            width: 25px;
+        }
+        .post .more-info .we h1 { 
+            font-size: 25px;
+        }   
+        .post .row { 
+            flex-direction: column;
+            row-gap: 20px;
+        }
+        .post .best-service .left .icon { 
+            left: 150px;
+        }
+        .post .best-service .left .image-corner #posht , .post .best-service .left .image-corner #nalt { 
+            display: none;
+        }
+        .post .best-service .left .icon { 
+            margin: 0 auto;
+            left: 0;
+        }
+        .post .best-service .right { 
+            left: 0;
+        }
+        footer .footer-top { 
+            padding: 50px;
+        }
+        .footer-bottom .center .col h3 { 
+            font-size: 13px;
+        }
+}
+@media only screen and (min-width:921px) and (max-width:1240px) { 
+    html , body { 
+        overflow-x: hidden;
+    }
+    * { 
+        padding: 0;
+        margin: 0;
+    }
+    ::-webkit-scrollbar { 
+        display: none;
+    }
+    .blog .container header .row-header .logo {
+      left: 25px;
+    }
+    .blog .container header .row-header .btn { 
+        right: 25px;
+    }
+    .blog .row .col h1 { 
+        font-size: 40px;
+    }
+    .post { 
+        padding: 150px;
+    }
+    .post .best-service .right .left-content h3::before { 
+        width: 25px;
+    }
+}
+@media only screen and (max-width:1241px) { 
+    html , body { 
+        overflow-x: hidden;
+    }
+    * { 
+        padding: 0;
+        margin: 0;
+    }
+    
+}
